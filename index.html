@@ -6,30 +6,36 @@
     <!-- http://proger.i-forge.net/The_smallest_transparent_pixel/ -->
     <link rel="icon" href="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=">
     <link rel="stylesheet" href="css/style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
+<div id="imageContainer"></div>
 <div class="main-container">
     <h1>Color picker</h1>
     <div class="color-picker">
         <div class="rgb-picker">
             <label for="red">Red</label>
-            <input type="number" id="red">
-        </div>
-        <div class="rgb-picker">
-            <label for="blue">Blue</label>
-            <input type="number" id="green">
+            <input type="number" id="red" required min="0" max="255" value="0">
         </div>
         <div class="rgb-picker">
             <label for="green">Green</label>
-            <input type="number" id="blue">
+            <input type="number" id="green" required min="0" max="255" value="0">
+        </div>
+        <div class="rgb-picker">
+            <label for="blue">Blue</label>
+            <input type="number" id="blue" required min="0" max="255" value="0">
+        </div>  
+        <div class="rgb-picker">
+            <label for="transparency">Transparency</label>
+            <input type="number" id="transparency" required min="0" max="100" value="100">
         </div>
     </div>
-    <p>HEX value: #......</p>
+    <p>HEX value: <span id="hexa"></span></p>
     <p>Binary values:</p>
     <ul>
-        <li>Red: ...</li>
-        <li>Green: ...</li>
-        <li>Blue: ...</li>
+        <li>Red: <span id="binaryRed"></span></li>
+        <li>Green: <span id="binaryGreen"></span></li>
+        <li>Blue: <span id="binaryBlue"></span></li>
     </ul>
 </div>
 </body>
